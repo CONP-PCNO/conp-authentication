@@ -1,38 +1,20 @@
-<!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>CONP | Sign In </title>
-        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-        <link href="./css/custom.css" rel="stylesheet">
-        <link rel="icon" href="./img/conp.ico" type="image/x-icon" />
-        <!--[if lt IE 9]>
-            <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.6.1/html5shiv.js" type="text/javascript"></script>
-        <![endif]-->
-
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-        <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
-        <script src="./js/login.js" type="text/javascript"></script>
- </head>
-
-<body>
-
+{% extends 'base.html' %}
+{% block content %}
     <div class="container">
         <div style="text-align: center;">
-            <img src="./img/conp-pcno-logo.png" style="height: 150px; padding-top: 30px;">
+            <img src="/static/img/conp-pcno-logo.png" style="height: 150px; padding-top: 20px;">
             <p>Sign in with your CONP account to continue</p>
         </div>
         <div class="card card-container">
             <section class="row">
                 <a id="alt-login-orcid" class="btn-alt-login" href="#">
-                    <img class="orcid-logo" src="./img/orcid-logo.png">
+                    <img class="orcid-logo" src="/static/img/orcid-logo.png">
                     <span class="label-login">Sign in with ORCID</span>
                 </a>
             </section>
             <section class="row">
                 <a id="alt-login-inst" class="btn-alt-login" href="#">
-                    <img class="osf-alt-logo" src="./img/institution-logo.png">
+                    <img class="osf-alt-logo" src="/static/img/institution-logo.png">
                     <span class="label-login">Sign in through institution</span>
                 </a>
              </section>
@@ -55,4 +37,4 @@
             </a>
         </div><!-- /card-container -->
     </div><!-- /container -->
-</body>
+{% endblock %}
