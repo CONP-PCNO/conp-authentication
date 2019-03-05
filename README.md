@@ -27,7 +27,7 @@ point to the URL, as shown in the example below
 ```shell
 export DATABASE_URL="postgresql://[db_name:db_pass@][hostname]/database_name"
 ```
-3. Fill in the contents of the database. This is done by running:
+3. Create the tables. This is done by running:
 ```
 flask db upgrade
 ```
