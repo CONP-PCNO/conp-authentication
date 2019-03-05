@@ -5,7 +5,7 @@ login and authenticate users
 
 ### Requirements
 
-This code requires Python 3.7 
+This code requires Python 3.7 and PostgreSQL 9.5
 
 ### Python Virtual Environment
 
