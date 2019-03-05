@@ -16,14 +16,20 @@ Create a Python virtual environment called `venv` and install Flask dependencies
     pip install -r requirements.txt
     
 ### Database set up
-After installing PostgreSQL you'll need to create an empty database. Run
-`createdb conp-auth` to do this. By default the app will search for a database
-named 'conp-auth' on localhost, but to override this you can create an
-environment variable named 'DATABASE_URL' that points to yours.
+After installing PostgreSQL there are a few steps needed to get your database
+set up.
 
-Example:
+1. Run `createdb conp-auth` to create an empty database named 'conp-auth'.
+2. Tell the app how to find your database. If no settings are provided it
+will try to connect to a database on localhost named 'conp-auth'. If you need
+to override this you can set an environment variable named 'DATABASE_URL' to
+point to the URL, as shown in the example below
 ```shell
-export DATABASE_URL="postgresql://[db_name:db_pass@]<hostname>/<database_name>"
+export DATABASE_URL="postgresql://[db_name:db_pass@][hostname]/database_name"
+```
+3. Fill in the contents of the database. This is done by running:
+```
+flask db upgrade
 ```
 
 ### Run Application
