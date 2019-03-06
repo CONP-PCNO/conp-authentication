@@ -188,6 +188,7 @@ body, html {
     height: 1.5em;
     opacity: .5;
     font-size: 1.4em;
+    width:100%;
 }
 
 .hr-text::before {
