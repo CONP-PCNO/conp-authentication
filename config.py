@@ -5,3 +5,5 @@ class Config(object):
     SQLALCHEMY_DATABASE_URI = (os.environ.get('DATABASE_URL') or
         'postgresql:///conp-auth')
     SQLALCHEMY_TRACK_MODIFICATIONS = False
+    OAUTH_CREDENTIALS = {'orcid': {'id': os.environ.get('OAUTH_ORCID_ID'),
+                                   'secret': os.environ.get('OAUTH_ORCID_SECRET')}}
